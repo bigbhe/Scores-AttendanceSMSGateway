@@ -55,6 +55,7 @@
     <Reference Include="DevExpress.XtraEditors.v16.1" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -124,6 +125,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetMapping.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DataSetMessage.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMessage.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\DataSetStudentRelation.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +174,36 @@
       <DependentUpon>FormMappingTeacherClassSubject.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\FormMapping\FormMappingTeacherClassSubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Message\FormFailedToSend.Designer.vb">
+      <DependentUpon>FormFailedToSend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Message\FormFailedToSend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Message\FormInbox.Designer.vb">
+      <DependentUpon>FormInbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Message\FormInbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Message\FormMessageSending.Designer.vb">
+      <DependentUpon>FormMessageSending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Message\FormMessageSending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Message\FormSendMessage.Designer.vb">
+      <DependentUpon>FormSendMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Message\FormSendMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Message\FormSentMessage.Designer.vb">
+      <DependentUpon>FormSentMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Message\FormSentMessage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\SchoolProperties\FormAttendanceState.Designer.vb">
@@ -272,6 +308,21 @@
     <EmbeddedResource Include="Form\FormMapping\FormMappingTeacherClassSubject.resx">
       <DependentUpon>FormMappingTeacherClassSubject.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Message\FormFailedToSend.resx">
+      <DependentUpon>FormFailedToSend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Message\FormInbox.resx">
+      <DependentUpon>FormInbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Message\FormMessageSending.resx">
+      <DependentUpon>FormMessageSending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Message\FormSendMessage.resx">
+      <DependentUpon>FormSendMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Message\FormSentMessage.resx">
+      <DependentUpon>FormSentMessage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\SchoolProperties\FormAttendanceState.resx">
       <DependentUpon>FormAttendanceState.vb</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +416,17 @@
     <None Include="Dataset\DataSetMapping.xss">
       <DependentUpon>DataSetMapping.xsd</DependentUpon>
     </None>
+    <None Include="Dataset\DataSetMessage.xsc">
+      <DependentUpon>DataSetMessage.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetMessage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMessage.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetMessage.xss">
+      <DependentUpon>DataSetMessage.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\DataSetStudentRelation.xsc">
       <DependentUpon>DataSetStudentRelation.xsd</DependentUpon>
     </None>
@@ -430,6 +492,20 @@
     <None Include="Resources\exam %281%29.png" />
     <None Include="Resources\unnamed.png" />
     <None Include="Resources\setting.png" />
+    <None Include="Resources\1-keXbkp7HlbVH0Twizfqmkw.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-12-Mail-message-send.ico" />
+    <None Include="Resources\email_inbox_01.png" />
+    <None Include="Resources\outbox.png" />
+    <None Include="Resources\envelope.png" />
+    <None Include="Resources\df.png" />
+    <None Include="Resources\asdasda.png" />
+    <None Include="Resources\st.png" />
+    <None Include="Resources\asdasdasdfadfasf.png" />
+    <None Include="Resources\sent.png" />
+    <None Include="Resources\sentjadi.png" />
+    <None Include="Resources\outbox1.png" />
     <Content Include="Settings\config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

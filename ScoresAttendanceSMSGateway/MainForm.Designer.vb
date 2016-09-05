@@ -57,10 +57,19 @@
         Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.mdiManager = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
+        Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
+        Me.NavBarGroup1 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.nbItemInxox = New DevExpress.XtraNavBar.NavBarItem()
+        Me.nbItemSent = New DevExpress.XtraNavBar.NavBarItem()
+        Me.nbOutBox = New DevExpress.XtraNavBar.NavBarItem()
+        Me.nbNotSend = New DevExpress.XtraNavBar.NavBarItem()
+        Me.nbOutGoingMessage = New DevExpress.XtraNavBar.NavBarItem()
+        Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mdiManager, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ribbonControl1
@@ -74,7 +83,7 @@
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage2, Me.ribbonPage1, Me.rpSettings})
         Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
         Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010
-        Me.ribbonControl1.Size = New System.Drawing.Size(758, 146)
+        Me.ribbonControl1.Size = New System.Drawing.Size(874, 146)
         Me.ribbonControl1.StatusBar = Me.RibbonStatusBar1
         '
         'BarAndDockingController1
@@ -296,10 +305,10 @@
         '
         Me.RibbonStatusBar1.ItemLinks.Add(Me.labelFullName)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.labelDateTime)
-        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 329)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 585)
         Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
         Me.RibbonStatusBar1.Ribbon = Me.ribbonControl1
-        Me.RibbonStatusBar1.Size = New System.Drawing.Size(758, 31)
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(874, 31)
         '
         'mdiManager
         '
@@ -310,12 +319,74 @@
         '
         Me.tmrMain.Enabled = True
         '
+        'NavBarControl1
+        '
+        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup1
+        Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.NavBarGroup1, Me.NavBarGroup2})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.nbItemInxox, Me.nbItemSent, Me.nbOutBox, Me.nbNotSend, Me.nbOutGoingMessage})
+        Me.NavBarControl1.Location = New System.Drawing.Point(0, 146)
+        Me.NavBarControl1.Name = "NavBarControl1"
+        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 140
+        Me.NavBarControl1.Size = New System.Drawing.Size(140, 439)
+        Me.NavBarControl1.TabIndex = 3
+        Me.NavBarControl1.Text = "NavBarControl1"
+        '
+        'NavBarGroup1
+        '
+        Me.NavBarGroup1.Caption = "Message"
+        Me.NavBarGroup1.Expanded = True
+        Me.NavBarGroup1.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.nbItemInxox), New DevExpress.XtraNavBar.NavBarItemLink(Me.nbItemSent), New DevExpress.XtraNavBar.NavBarItemLink(Me.nbOutBox), New DevExpress.XtraNavBar.NavBarItemLink(Me.nbNotSend), New DevExpress.XtraNavBar.NavBarItemLink(Me.nbOutGoingMessage)})
+        Me.NavBarGroup1.Name = "NavBarGroup1"
+        '
+        'nbItemInxox
+        '
+        Me.nbItemInxox.Caption = "Inbox"
+        Me.nbItemInxox.Name = "nbItemInxox"
+        Me.nbItemInxox.SmallImage = Global.ScoresAttendanceSMSGateway.My.Resources.Resources.download__1_
+        Me.nbItemInxox.SmallImageSize = New System.Drawing.Size(20, 20)
+        '
+        'nbItemSent
+        '
+        Me.nbItemSent.Caption = "Sent"
+        Me.nbItemSent.Name = "nbItemSent"
+        Me.nbItemSent.SmallImage = Global.ScoresAttendanceSMSGateway.My.Resources.Resources.Custom_Icon_Design_Pretty_Office_12_Mail_message_send
+        Me.nbItemSent.SmallImageSize = New System.Drawing.Size(20, 20)
+        '
+        'nbOutBox
+        '
+        Me.nbOutBox.Caption = "Out Box"
+        Me.nbOutBox.Name = "nbOutBox"
+        Me.nbOutBox.SmallImage = Global.ScoresAttendanceSMSGateway.My.Resources.Resources.outbox
+        Me.nbOutBox.SmallImageSize = New System.Drawing.Size(20, 20)
+        '
+        'nbNotSend
+        '
+        Me.nbNotSend.Caption = "Failed"
+        Me.nbNotSend.LargeImageSize = New System.Drawing.Size(16, 16)
+        Me.nbNotSend.Name = "nbNotSend"
+        Me.nbNotSend.SmallImage = Global.ScoresAttendanceSMSGateway.My.Resources.Resources.asdasda
+        Me.nbNotSend.SmallImageSize = New System.Drawing.Size(20, 16)
+        '
+        'nbOutGoingMessage
+        '
+        Me.nbOutGoingMessage.Caption = "Outgoing"
+        Me.nbOutGoingMessage.Name = "nbOutGoingMessage"
+        Me.nbOutGoingMessage.SmallImage = Global.ScoresAttendanceSMSGateway.My.Resources.Resources.outbox1
+        Me.nbOutGoingMessage.SmallImageSize = New System.Drawing.Size(20, 20)
+        '
+        'NavBarGroup2
+        '
+        Me.NavBarGroup2.Caption = "List"
+        Me.NavBarGroup2.Name = "NavBarGroup2"
+        '
         'MainForm
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(758, 360)
+        Me.ClientSize = New System.Drawing.Size(874, 616)
+        Me.Controls.Add(Me.NavBarControl1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.ribbonControl1)
         Me.IsMdiContainer = True
@@ -328,6 +399,7 @@
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mdiManager, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -368,4 +440,12 @@
     Friend WithEvents menuAttendance As XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup6 As XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents menuAttendanceState As XtraBars.BarButtonItem
+    Friend WithEvents NavBarControl1 As XtraNavBar.NavBarControl
+    Friend WithEvents NavBarGroup1 As XtraNavBar.NavBarGroup
+    Friend WithEvents nbItemInxox As XtraNavBar.NavBarItem
+    Friend WithEvents NavBarGroup2 As XtraNavBar.NavBarGroup
+    Friend WithEvents nbItemSent As XtraNavBar.NavBarItem
+    Friend WithEvents nbOutBox As XtraNavBar.NavBarItem
+    Friend WithEvents nbNotSend As XtraNavBar.NavBarItem
+    Friend WithEvents nbOutGoingMessage As XtraNavBar.NavBarItem
 End Class

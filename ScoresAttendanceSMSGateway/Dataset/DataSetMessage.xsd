@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetMessage" targetNamespace="http://tempuri.org/DataSetMessage.xsd" xmlns:mstns="http://tempuri.org/DataSetMessage.xsd" xmlns="http://tempuri.org/DataSetMessage.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ScoresAttendanceSMSGateway.Settings.GlobalReference.Default.ConnString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ozekimessageoutTableAdapter" GeneratorDataComponentClassName="ozekimessageoutTableAdapter" Name="ozekimessageout" UserDataComponentName="ozekimessageoutTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="ScoresAttendanceSMSGateway.dbo.ozekimessageout" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        receiver, msg
+FROM            ozekimessageout
+WHERE        (status = 'send')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="receiver" DataSetColumn="receiver" />
+              <Mapping SourceColumn="msg" DataSetColumn="msg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ozekimessageinTableAdapter" GeneratorDataComponentClassName="ozekimessageinTableAdapter" Name="ozekimessagein" UserDataComponentName="ozekimessageinTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="ScoresAttendanceSMSGateway.dbo.ozekimessagein" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ozekimessagein.*
+FROM            ozekimessagein</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="sender" DataSetColumn="sender" />
+              <Mapping SourceColumn="receiver" DataSetColumn="receiver" />
+              <Mapping SourceColumn="msg" DataSetColumn="msg" />
+              <Mapping SourceColumn="senttime" DataSetColumn="senttime" />
+              <Mapping SourceColumn="receivedtime" DataSetColumn="receivedtime" />
+              <Mapping SourceColumn="operator" DataSetColumn="operator" />
+              <Mapping SourceColumn="msgtype" DataSetColumn="msgtype" />
+              <Mapping SourceColumn="reference" DataSetColumn="reference" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ozekimessageoutSentTableAdapter" GeneratorDataComponentClassName="ozekimessageoutSentTableAdapter" Name="ozekimessageoutSent" UserDataComponentName="ozekimessageoutSentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="ScoresAttendanceSMSGateway.dbo.ozekimessageout" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        sender, receiver, msg
+FROM            ozekimessageout
+WHERE        (status = 'sent')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sender" DataSetColumn="sender" />
+              <Mapping SourceColumn="receiver" DataSetColumn="receiver" />
+              <Mapping SourceColumn="msg" DataSetColumn="msg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ozekimessageoutOutgoingTableAdapter" GeneratorDataComponentClassName="ozekimessageoutOutgoingTableAdapter" Name="ozekimessageoutOutgoing" UserDataComponentName="ozekimessageoutOutgoingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="ScoresAttendanceSMSGateway.dbo.ozekimessageout" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        sender, receiver, msg
+FROM            ozekimessageout
+WHERE        (status = 'sending')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sender" DataSetColumn="sender" />
+              <Mapping SourceColumn="receiver" DataSetColumn="receiver" />
+              <Mapping SourceColumn="msg" DataSetColumn="msg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ozekimessageoutSendingTableAdapter" GeneratorDataComponentClassName="ozekimessageoutSendingTableAdapter" Name="ozekimessageoutSending" UserDataComponentName="ozekimessageoutSendingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="ScoresAttendanceSMSGateway.dbo.ozekimessageout" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        sender, receiver, msg
+FROM            ozekimessageout
+WHERE        (status = 'sending')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sender" DataSetColumn="sender" />
+              <Mapping SourceColumn="receiver" DataSetColumn="receiver" />
+              <Mapping SourceColumn="msg" DataSetColumn="msg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ozekimessageoutFailedTableAdapter" GeneratorDataComponentClassName="ozekimessageoutFailedTableAdapter" Name="ozekimessageoutFailed" UserDataComponentName="ozekimessageoutFailedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Settings)" DbObjectName="ScoresAttendanceSMSGateway.dbo.ozekimessageout" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ozekimessageout] ([sender], [receiver], [msg]) VALUES (@sender, @receiver, @msg)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sender" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@receiver" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="receiver" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@msg" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="msg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        sender, receiver, msg
+FROM            ozekimessageout
+WHERE        (status = 'not sent')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sender" DataSetColumn="sender" />
+              <Mapping SourceColumn="receiver" DataSetColumn="receiver" />
+              <Mapping SourceColumn="msg" DataSetColumn="msg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetMessage" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetMessage" msprop:Generator_UserDSName="DataSetMessage">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ozekimessageout" msprop:Generator_TableClassName="ozekimessageoutDataTable" msprop:Generator_TableVarName="tableozekimessageout" msprop:Generator_RowChangedName="ozekimessageoutRowChanged" msprop:Generator_TablePropName="ozekimessageout" msprop:Generator_RowDeletingName="ozekimessageoutRowDeleting" msprop:Generator_RowChangingName="ozekimessageoutRowChanging" msprop:Generator_RowEvHandlerName="ozekimessageoutRowChangeEventHandler" msprop:Generator_RowDeletedName="ozekimessageoutRowDeleted" msprop:Generator_RowClassName="ozekimessageoutRow" msprop:Generator_UserTableName="ozekimessageout" msprop:Generator_RowEvArgName="ozekimessageoutRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="receiver" msprop:Generator_ColumnVarNameInTable="columnreceiver" msprop:Generator_ColumnPropNameInRow="receiver" msprop:Generator_ColumnPropNameInTable="receiverColumn" msprop:Generator_UserColumnName="receiver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_UserColumnName="msg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ozekimessagein" msprop:Generator_TableClassName="ozekimessageinDataTable" msprop:Generator_TableVarName="tableozekimessagein" msprop:Generator_TablePropName="ozekimessagein" msprop:Generator_RowDeletingName="ozekimessageinRowDeleting" msprop:Generator_RowChangingName="ozekimessageinRowChanging" msprop:Generator_RowEvHandlerName="ozekimessageinRowChangeEventHandler" msprop:Generator_RowDeletedName="ozekimessageinRowDeleted" msprop:Generator_UserTableName="ozekimessagein" msprop:Generator_RowChangedName="ozekimessageinRowChanged" msprop:Generator_RowEvArgName="ozekimessageinRowChangeEvent" msprop:Generator_RowClassName="ozekimessageinRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="sender" msprop:Generator_ColumnVarNameInTable="columnsender" msprop:Generator_ColumnPropNameInRow="sender" msprop:Generator_ColumnPropNameInTable="senderColumn" msprop:Generator_UserColumnName="sender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receiver" msprop:Generator_ColumnVarNameInTable="columnreceiver" msprop:Generator_ColumnPropNameInRow="receiver" msprop:Generator_ColumnPropNameInTable="receiverColumn" msprop:Generator_UserColumnName="receiver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_UserColumnName="msg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="senttime" msprop:Generator_ColumnVarNameInTable="columnsenttime" msprop:Generator_ColumnPropNameInRow="senttime" msprop:Generator_ColumnPropNameInTable="senttimeColumn" msprop:Generator_UserColumnName="senttime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receivedtime" msprop:Generator_ColumnVarNameInTable="columnreceivedtime" msprop:Generator_ColumnPropNameInRow="receivedtime" msprop:Generator_ColumnPropNameInTable="receivedtimeColumn" msprop:Generator_UserColumnName="receivedtime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="operator" msprop:Generator_ColumnVarNameInTable="columnoperator" msprop:Generator_ColumnPropNameInRow="_operator" msprop:Generator_ColumnPropNameInTable="operatorColumn" msprop:Generator_UserColumnName="operator" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msgtype" msprop:Generator_ColumnVarNameInTable="columnmsgtype" msprop:Generator_ColumnPropNameInRow="msgtype" msprop:Generator_ColumnPropNameInTable="msgtypeColumn" msprop:Generator_UserColumnName="msgtype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reference" msprop:Generator_ColumnVarNameInTable="columnreference" msprop:Generator_ColumnPropNameInRow="reference" msprop:Generator_ColumnPropNameInTable="referenceColumn" msprop:Generator_UserColumnName="reference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ozekimessageoutSent" msprop:Generator_TableClassName="ozekimessageoutSentDataTable" msprop:Generator_TableVarName="tableozekimessageoutSent" msprop:Generator_RowChangedName="ozekimessageoutSentRowChanged" msprop:Generator_TablePropName="ozekimessageoutSent" msprop:Generator_RowDeletingName="ozekimessageoutSentRowDeleting" msprop:Generator_RowChangingName="ozekimessageoutSentRowChanging" msprop:Generator_RowEvHandlerName="ozekimessageoutSentRowChangeEventHandler" msprop:Generator_RowDeletedName="ozekimessageoutSentRowDeleted" msprop:Generator_RowClassName="ozekimessageoutSentRow" msprop:Generator_UserTableName="ozekimessageoutSent" msprop:Generator_RowEvArgName="ozekimessageoutSentRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sender" msprop:Generator_ColumnVarNameInTable="columnsender" msprop:Generator_ColumnPropNameInRow="sender" msprop:Generator_ColumnPropNameInTable="senderColumn" msprop:Generator_UserColumnName="sender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receiver" msprop:Generator_ColumnVarNameInTable="columnreceiver" msprop:Generator_ColumnPropNameInRow="receiver" msprop:Generator_ColumnPropNameInTable="receiverColumn" msprop:Generator_UserColumnName="receiver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_UserColumnName="msg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ozekimessageoutOutgoing" msprop:Generator_TableClassName="ozekimessageoutOutgoingDataTable" msprop:Generator_TableVarName="tableozekimessageoutOutgoing" msprop:Generator_RowChangedName="ozekimessageoutOutgoingRowChanged" msprop:Generator_TablePropName="ozekimessageoutOutgoing" msprop:Generator_RowDeletingName="ozekimessageoutOutgoingRowDeleting" msprop:Generator_RowChangingName="ozekimessageoutOutgoingRowChanging" msprop:Generator_RowEvHandlerName="ozekimessageoutOutgoingRowChangeEventHandler" msprop:Generator_RowDeletedName="ozekimessageoutOutgoingRowDeleted" msprop:Generator_RowClassName="ozekimessageoutOutgoingRow" msprop:Generator_UserTableName="ozekimessageoutOutgoing" msprop:Generator_RowEvArgName="ozekimessageoutOutgoingRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sender" msprop:Generator_ColumnVarNameInTable="columnsender" msprop:Generator_ColumnPropNameInRow="sender" msprop:Generator_ColumnPropNameInTable="senderColumn" msprop:Generator_UserColumnName="sender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receiver" msprop:Generator_ColumnVarNameInTable="columnreceiver" msprop:Generator_ColumnPropNameInRow="receiver" msprop:Generator_ColumnPropNameInTable="receiverColumn" msprop:Generator_UserColumnName="receiver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_UserColumnName="msg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ozekimessageoutSending" msprop:Generator_TableClassName="ozekimessageoutSendingDataTable" msprop:Generator_TableVarName="tableozekimessageoutSending" msprop:Generator_TablePropName="ozekimessageoutSending" msprop:Generator_RowDeletingName="ozekimessageoutSendingRowDeleting" msprop:Generator_RowChangingName="ozekimessageoutSendingRowChanging" msprop:Generator_RowEvHandlerName="ozekimessageoutSendingRowChangeEventHandler" msprop:Generator_RowDeletedName="ozekimessageoutSendingRowDeleted" msprop:Generator_UserTableName="ozekimessageoutSending" msprop:Generator_RowChangedName="ozekimessageoutSendingRowChanged" msprop:Generator_RowEvArgName="ozekimessageoutSendingRowChangeEvent" msprop:Generator_RowClassName="ozekimessageoutSendingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sender" msprop:Generator_ColumnVarNameInTable="columnsender" msprop:Generator_ColumnPropNameInRow="sender" msprop:Generator_ColumnPropNameInTable="senderColumn" msprop:Generator_UserColumnName="sender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receiver" msprop:Generator_ColumnVarNameInTable="columnreceiver" msprop:Generator_ColumnPropNameInRow="receiver" msprop:Generator_ColumnPropNameInTable="receiverColumn" msprop:Generator_UserColumnName="receiver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_UserColumnName="msg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ozekimessageoutFailed" msprop:Generator_TableClassName="ozekimessageoutFailedDataTable" msprop:Generator_TableVarName="tableozekimessageoutFailed" msprop:Generator_TablePropName="ozekimessageoutFailed" msprop:Generator_RowDeletingName="ozekimessageoutFailedRowDeleting" msprop:Generator_RowChangingName="ozekimessageoutFailedRowChanging" msprop:Generator_RowEvHandlerName="ozekimessageoutFailedRowChangeEventHandler" msprop:Generator_RowDeletedName="ozekimessageoutFailedRowDeleted" msprop:Generator_UserTableName="ozekimessageoutFailed" msprop:Generator_RowChangedName="ozekimessageoutFailedRowChanged" msprop:Generator_RowEvArgName="ozekimessageoutFailedRowChangeEvent" msprop:Generator_RowClassName="ozekimessageoutFailedRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sender" msprop:Generator_ColumnVarNameInTable="columnsender" msprop:Generator_ColumnPropNameInRow="sender" msprop:Generator_ColumnPropNameInTable="senderColumn" msprop:Generator_UserColumnName="sender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receiver" msprop:Generator_ColumnVarNameInTable="columnreceiver" msprop:Generator_ColumnPropNameInRow="receiver" msprop:Generator_ColumnPropNameInTable="receiverColumn" msprop:Generator_UserColumnName="receiver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_UserColumnName="msg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
